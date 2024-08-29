@@ -1,21 +1,12 @@
-{% comment %}
+{%- comment -%}
   Renders product variant options
-
   Accepts:
   - product: {Object} product object.
   - option: {Object} current product_option object.
   - block: {Object} block object.
-  - picker_type: {String} type of picker to dispay
+  - picker_type: {String} type of picker to display
+{%- endcomment -%}
 
-
-  Usage:
-  {% render 'product-variant-options',
-    product: product,
-    option: option,
-    block: block
-    picker_type: picker_type
-  %}
-{% endcomment %}
 {%- liquid
   assign product_form_id = 'product-form-' | append: section.id
 -%}
@@ -92,7 +83,22 @@
       {{ input_dataset }}
     >
     <label for="{{ input_id }}">
-      {{ value -}}
+      {%- assign variant = product.variants | where: 'option1', value | first -%}
+      {%- if variant.compare_at_price > variant.price -%}
+        <div class="bs-devshop__oldPrice">
+          <span class="bs-devshop__old-price_label">{{ 'Old Price: ' }}</span>
+          <span class="bs-devshop__old-price_value">{{ variant.compare_at_price | money }}</span>
+        </div>
+      {%- endif -%}
+      <div class="pr">{{ value -}}</div>
+      {%- if variant.compare_at_price > variant.price -%}
+        <div class="bs-devshop__save-price">
+          <span class="bs-devshop__save-price_label">({{ 'Save ' }}</span>
+          <span class="bs-devshop__save-price_value">
+            {{ variant.compare_at_price | minus: variant.price | money }}!)
+          </span>
+        </div>
+      {%- endif -%}
       {{ label_unavailable }}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
