@@ -1,0 +1,27 @@
+.gradient {
+    .color-scheme-1 {
+        .product.product--large {
+            .product__info-wrapper {
+                .product-form__input {
+                    display: flex;
+                    .bs-devshop__form__label {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 24px;
+                    }
+                    label {
+                        border-radius: 10px;
+                        position: relative;
+                        padding: 2rem 0.5rem; 
+                        .bs-devshop__oldPrice {
+                            position: absolute;
+                            top: -8px;
+                            background-color: #d3cece;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

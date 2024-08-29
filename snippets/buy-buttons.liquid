@@ -10,7 +10,7 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }}>
+<div {{ block.shopify_attributes }} style="margin:0;">
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -78,6 +78,10 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+          <div class="bs-devshop__fast_delivery">
+              <div class="bs-devshop__truck_badge"><img src="{{ 'shipping-bus.png' | asset_url }}"/>FAST DELIVERY</div>
+              <span>Ships the same day.</span>
+          </div>
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -91,6 +95,8 @@
             {% endif %}
           >
             <span>
+              <img src="{{ 'cart-icon.png' | asset_url }}"/>
+              <span class="add_to_cart_text">
               {%- if product.selected_or_first_available_variant == nil -%}
                 {{ 'products.product.unavailable' | t }}
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
@@ -98,6 +104,7 @@
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
+              </span>
             </span>
             {%- render 'loading-spinner' -%}
           </button>
@@ -106,6 +113,14 @@
           {%- endif -%}
         </div>
       {%- endform -%}
+    <div class="bs-devshop__guarantee">
+        <div class="bs-devshop__guar">
+          <img src="{{ 'rating-badge.png' | asset_url }}"/>Money-back guarantee
+        </div>
+        <div class="bs-devshop__ship">
+          <img src="{{ 'fast-bus-icon.png' | asset_url }}"/>Free 3 day shipping in US
+        </div>
+    </div>
     </product-form>
   {%- else -%}
     <div class="product-form">
@@ -151,7 +166,18 @@
         </pickup-availability-preview>
       </template>
     </pickup-availability>
-
+     
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
+     <div class="bs-devshop__payment">
+        <div class="bs-devshop__pay_inner">
+            <img class="visa_pay" src="{{ 'visa-cards.png' | asset_url }}"/>
+            <img class="after_pay" src="{{ 'after-pay.png' | asset_url }}"/>
+            <img class="apple-pay" src="{{ 'apple-pay.png' | asset_url }}"/>
+        </div>
+        <div class="bs-devshop__pay_inner">
+          <img src="{{ 'lock-icon.png' | asset_url }}"/>
+          Shop with confidence Your checkout is 256-bit encrypted.
+        </div>
+     </div>       
 </div>

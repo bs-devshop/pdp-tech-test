@@ -27,6 +27,7 @@
           endif
         endif
       -%}
+      {% assign option_name =  option.name | downcase %}
       {%- if picker_type == 'swatch' -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
@@ -44,7 +45,11 @@
         </fieldset>
       {%- elsif picker_type == 'button' -%}
         <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
+          {% if  option_name == 'quantity' %}
+              <legend class="bs-devshop__form__label">{{ 'Pick your bundle below:' }}</legend>
+          {% else %}
+              <legend class="form__label">{{ option.name }}</legend>
+          {% endif %}
           {% render 'product-variant-options',
             product: product,
             option: option,
@@ -55,7 +60,12 @@
       {%- else -%}
         <div class="product-form__input product-form__input--dropdown">
           <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-            {{ option.name }}
+            {% if  option_name == 'quantity' %}
+              {{ 'Select your bundle:' }}
+          {% else %}
+              {{ option.name }}
+          {% endif %}
+            
           </label>
           <div class="select">
             {%- if picker_type == 'swatch_dropdown' -%}

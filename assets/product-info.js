@@ -13,7 +13,6 @@ if (!customElements.get('product-info')) {
 
       constructor() {
         super();
-
         this.quantityInput = this.querySelector('.quantity__input');
       }
 
@@ -212,6 +211,7 @@ if (!customElements.get('product-info')) {
       }
 
       updateVariantInputs(variantId) {
+        Shopify.theme.generateSellingPlanRadios(variantId);
         this.querySelectorAll(
           `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`
         ).forEach((productForm) => {
