@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face{
+  font-family: HandelGothic-bt;
+  src: url(https://cdn.shopify.com/s/files/1/0890/3907/7705/files/HandelGo.ttf?v=1724474229);
+  font-weight:400;
+}
+
+#pdp_design .product__info-wrapper {
+    padding: 0 0 0 20px;
+   --orange_border:3px solid #FF9900;
+}
+/** variation css **/
+#pdp_design .product__info-wrapper fieldset .bs-devshop__form__label{
+  font-family:HandelGothic-bt;
+  font-weight:400;
+  color:#000;
+  margin-bottom:62px;
+  line-height: 2.6rem;
+}
+#pdp_design .product-form__input{
+  max-width:100%;
+}
+#pdp_design .product__info-wrapper variant-selects{
+  border:var(--orange_border);
+  border-bottom:none;
+  padding:20px 18px 0;
+  background:#FFE9C9;
+  margin-bottom:0;
+  border-radius:10px 10px 0 0;
+}
+#pdp_design .product__info-wrapper fieldset{
+  margin-bottom:0;
+  gap:30px 0;
+}
+#pdp_design .product__info-wrapper fieldset label{
+  background:#E1E1E1;
+  border:2px solid #8B8B8B;
+  font-family:HandelGothic-bt;
+  font-weight:400;
+  font-size:2rem;
+  color:#6C6C6C;
+  flex:1;
+  margin:0;
+  padding-bottom:10px;
+}
+#pdp_design .product__info-wrapper fieldset label:nth-last-of-type(2){
+  margin:0 18px;
+}
+#pdp_design .product__info-wrapper fieldset label .bs-devshop__oldPrice {
+    background: #e1e1e1;
+    font-size: 1.2rem;
+    color: #6c6c6c;
+    left: 5px;
+    right: 5px;
+    margin: 0 auto;
+   top:-14px;
+   padding:2px 0;
+}
+#pdp_design .product__info-wrapper fieldset label .bs-devshop__save-price {
+    font-size: 1rem;
+    margin-top: 10px;
+    width: max-content;
+    margin: 10px auto 0;
+    padding:2px;
+    border-radius:2px;
+}
+#pdp_design .product__info-wrapper fieldset label:nth-of-type(2):after {
+    content: "Most popular!";
+    position: absolute;
+    top: -49px;
+    font-size: 1.8rem;
+    color: red;
+    margin: 0 auto;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+     background: linear-gradient(to right, #FF0000, #FFB800, #FF6B00, #FF0000, #FFB800, #FF6B00);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:HandelGothic-bt;
+    font-weight:400;
+}
+#pdp_design .product__info-wrapper fieldset :checked + label{
+  border:2px solid #FF9900;
+  background:#FFD495;
+  color:#000;
+}
+#pdp_design .product__info-wrapper fieldset :checked + label .bs-devshop__oldPrice{
+  background:#930000;
+  color:#fff;
+}
+#pdp_design .product__info-wrapper fieldset :checked + label .bs-devshop__save-price{
+  background:#0C9200;
+  color:#fff;
+}
+#pdp_design .product__info-wrapper .bs-devshop__selling-plan_heading{
+   font-family:HandelGothic-bt;
+  font-weight:400;
+  margin:0;
+  padding:3rem 0 1.5rem;
+  font-size:2.4rem;
+  line-height:2.8rem;
+  background:#ffe9c9;
+  color:#000;
+  text-align:center;
+  border-inline:var(--orange_border);
+}
+/** variation css **/
+/** recharge box css **/
+#pdp_design #selling-plan-radios{
+  border-inline:var(--orange_border);
+  margin:0;
+  padding:1.5rem 0 4rem;
+  background:#ffe9c9;
+  padding-inline:18px;
+}
+#pdp_design #selling-plan-radios label {
+    display: flex;
+    padding: 25px 30px;
+    
+}
+#pdp_design #selling-plan-radios label span{
+  font-size:1.7rem;
+  line-height:2.4rem;
+  font-family:HandelGothic-bt;
+  font-weight:400;
+  color:#000;
+ }
+#pdp_design #selling-plan-radios label[for=rc-radio1] {
+    --grayish_color: #6C6C6C;
+    background: #e1e1e1;
+    border: 2px solid #8B8B8B;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    z-index: 10;
+}
+#pdp_design #selling-plan-radios label[for="rc-radio1"] span{
+  color:var(--grayish_color);
+}
+#pdp_design #selling-plan-radios label[for="rc-radio1"] input[type="radio"]:after{
+  outline-color:var(--grayish_color);
+}
+#pdp_design #selling-plan-radios label[for="rc-radio1"] input[type="radio"]:checked:after{
+  background:var(--grayish_color);
+}
+#pdp_design #selling-plan-radios label > span,
+#pdp_design #selling-plan-radios label .bs-devshop__main-subscription{
+   margin-left:34px;
+}
+#pdp_design #selling-plan-radios label input[type="radio"]{
+  position:relative;
+  -webkit-appearance:none;
+}
+
+#pdp_design #selling-plan-radios label input[type=radio]:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 22px;
+    aspect-ratio: 1;
+    outline: 1px solid #000000;
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+#pdp_design #selling-plan-radios label input[type="radio"]:checked:after{
+  background:#000;
+}
+#pdp_design #selling-plan-radios label .bs-devshop__sub-text {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    display: block;
+    width: 166px;
+    margin-top: -18px;
+}
+#pdp_design #selling-plan-radios label .bs-devshop__subscription-option{
+    display: grid;
+    grid-template-columns: 1fr 115px;
+    gap: 0 20px;
+}
+#pdp_design #selling-plan-radios label .bs-devshop__subscription-option .bs-devshop__subscription-pricing{
+    font-size: 24px;
+    color: #AC0000;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+#pdp_design #selling-plan-radios label .bs-devshop__subscription_interval{
+  grid-column-start:2;
+  font-size:1.6rem;
+   font-family: Montserrat;
+  font-weight:500;
+  color:#3F3F3F;
+  
+}
+#pdp_design #selling-plan-radios label .bs-devshop__subscription-option .bs-devshop__saving{
+    font-size: 1rem;
+    font-family: Montserrat;
+    font-weight: 500;
+    background: #ff9900;
+    padding: 2px;
+}
+#pdp_design #selling-plan-radios label .bs-devshop__subscription-option strike{
+   font-size: 1rem;
+   font-family: Montserrat;
+   font-weight: 500;
+   color:#000;
+   margin-top:4px;
+}
+#pdp_design #selling-plan-radios label[for*="radio2"]{
+  position:relative;
+  isolation:isolate;
+}
+#pdp_design #selling-plan-radios label[for*="radio2"]:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  border: 2px solid #FF9900;
+  background:#FFD495;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  z-index:-1;
+}
+#pdp_design #selling-plan-radios label[for*=radio2]:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    z-index: -2;
+    border-radius: 0 0 10px 10px;
+    background: conic-gradient(from 90deg, #FF0000, #989B00, #007871, #02006D, #AB00C7, #BD0066, #ED001C, #FF0000);
+    transform: translate(0px,8px);
+    filter: blur(10px);
+}
+/** recharge box css **/
+/** buy buttons css **/
+#pdp_design .recharge-subscription-widget{
+  display:none;
+}
+#pdp_design product-form{
+  margin:0;
+   padding: 0 18px 25px;
+   border-inline:var(--orange_border);
+  background: #FFE9C9;
+}
+#pdp_design .product-form__submit{
+      background: #FF9900;
+    border-radius: 10px;
+    border: 2px solid #BC7100;
+    font-size: 2.4rem;
+    font-family: 'HandelGothic-bt';
+    padding-block:13px;
+}
+#pdp_design .product-form__submit span{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#pdp_design .product-form__submit span img{
+  width:35px;
+}
+#pdp_design .product-form__submit:after,
+#pdp_design .shopify-payment-button{
+  display:none;
+}
+.bs-devshop__fast_delivery{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom:10px;
+}
+.bs-devshop__fast_delivery img{
+  width:22px;
+  margin-right:4px;
+}
+.bs-devshop__truck_badge{
+   background: #2400FF;
+    color: #fff;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+    padding: 2px 7px;
+    border-radius: 2px;
+    font-size:1.3rem;
+    letter-spacing:10%;
+}
+.bs-devshop__fast_delivery span{
+  font-size:1.5rem;
+  font-family:Montserrat;
+  font-weight:500;
+  color:#000;
+}
+.bs-devshop__guarantee{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  font-size:1.3rem;
+  font-family: Montserrat;
+  color:#000;
+  gap:2px;
+}
+.bs-devshop__guarantee div{
+  display:inherit;
+  align-items:center;
+}
+.bs-devshop__guarantee img{
+  width:18px;
+  height:18px;
+  object-fit:contain;
+  margin-right:2px;
+}
+.bs-devshop__payment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+     border:var(--orange_border);
+      background: #FFE9C9;
+    border-top:none;
+    border-radius:0 0 10px 10px;
+    overflow:hidden;
+}
+.bs-devshop__pay_inner {
+    padding: 29px 8px;
+}
+.bs-devshop__payment .bs-devshop__pay_inner:first-child {
+    background: #ffc062;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+.bs-devshop__payment .bs-devshop__pay_inner:first-child img{
+  object-fit:contain;
+}
+.bs-devshop__payment .bs-devshop__pay_inner:first-child .visa_pay{
+   width:144px;
+}
+.bs-devshop__payment .bs-devshop__pay_inner:first-child .after_pay{
+   width:83px;
+}
+.bs-devshop__payment .bs-devshop__pay_inner:first-child .apple-pay{
+  width:49px;
+}
+.bs-devshop__payment .bs-devshop__pay_inner:last-child{
+  font-size:1.3rem;
+  line-height:1.5rem;
+   font-family: Montserrat;
+  font-weight:500;
+  color:#000;
+  text-align:center;
+  background:#fed08c;
+}
+.bs-devshop__payment .bs-devshop__pay_inner:last-child img{
+  width:17px; 
+}
+/** buy buttons css **/
+@media(max-width:1200px){
+  #pdp_design .product__info-wrapper fieldset{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  #pdp_design .product__info-wrapper fieldset label{
+    flex:0;
+  }
+  #pdp_design .product__info-wrapper fieldset .bs-devshop__form__label{
+    font-size:2.3rem;
+  }
+  #pdp_design .product__info-wrapper .bs-devshop__selling-plan_heading{
+    font-size:2rem;
+  }
+  #pdp_design #selling-plan-radios label{
+    padding:25px 5px;
+  }
+  #pdp_design #selling-plan-radios label .bs-devshop__subscription-option{
+    gap: 0 15px;
+  }
+  #pdp_design #selling-plan-radios label .bs-devshop__sub-text{
+    width:155px;
+  }
+  .truck_badge{
+    font-size:1rem;
+  }
+}
+@media(max-width:768px){
+  #pdp_design #selling-plan-radios label .bs-devshop__sub-text{
+    width:113px;
+  }
+ 
+}
+@media(max-width:767.98px){
+  #pdp_design .product__info-wrapper{
+    padding:0;
+  }
+  #pdp_design .product__info-wrapper variant-selects{
+    padding:20px 15px 0;
+  }
+  #pdp_design .product__info-wrapper fieldset label:nth-last-of-type(2){
+    margin:0;
+  }
+  #pdp_design .product__info-wrapper fieldset{
+    gap:30px 18px;
+  }
+  #pdp_design .product-form__submit{
+    font-size:1.7rem;
+    padding:0 10px;
+  }
+  #pdp_design .product-form__submit span svg{
+    width:25px;
+  }
+   #pdp_design .product__info-wrapper fieldset label:nth-of-type(3){
+    margin:0;
+   }
+  #pdp_design #selling-plan-radios label{
+    justify-content:center;
+  }
+  #pdp_design product-form form{
+    display:flex;
+    justify-content:center;
+  }
+}

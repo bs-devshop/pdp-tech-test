@@ -118,10 +118,10 @@ if (!customElements.get('product-form')) {
       toggleSubmitButton(disable = true, text) {
         if (disable) {
           this.submitButton.setAttribute('disabled', 'disabled');
-          if (text) this.submitButtonText.textContent = text;
+          if (text) this.submitButtonText.querySelector('.add_to_cart_text').textContent = text;
         } else {
           this.submitButton.removeAttribute('disabled');
-          this.submitButtonText.textContent = window.variantStrings.addToCart;
+          this.submitButtonText.querySelector('.add_to_cart_text').textContent = window.variantStrings.addToCart;
         }
       }
 
